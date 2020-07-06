@@ -9,7 +9,10 @@ import { ActivatedRoute } from "@angular/router"
 export class ProductDetailComponent implements OnInit {
   currentProductId;
   constructor(private activatedRout:ActivatedRoute) { 
-    this.currentProductId = this.activatedRout.snapshot.params.id;
+    // this.currentProductId = this.activatedRout.snapshot.params.id
+    this.activatedRout.params.subscribe((currentId) => {
+      this.currentProductId = currentId.id;
+    })
   }
 
   ngOnInit() {

@@ -56,10 +56,6 @@ const routes: Routes = [
   {
     path : "contact/name/person/:person",
     component : ServiceComponent
-  },
-  {
-    path : "**",
-    component : 
   }
   
 ];
